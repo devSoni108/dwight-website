@@ -41,7 +41,7 @@ export default function MeetDwight() {
               Meet Dwight: Your Dedicated AI Agent
             </h1>
             <p className="font-sans text-xl mb-8 max-w-3xl mx-auto text-[#370300]">
-              Dwight isn't just another AI tool. It's a uniquely trained AI Agent that feels like part of your team, bringing a depth of knowledge and support that's tailored to your specific needs. Dwight is here to work by the book, ensuring every detail is handled precisely.
+              Dwight isn&apos;t just another AI tool. It&apos;s a uniquely trained AI Agent that feels like part of your team, bringing a depth of knowledge and support that&apos;s tailored to your specific needs. Dwight is here to work by the book, ensuring every detail is handled precisely.
             </p>
           </div>
         </section>
@@ -80,7 +80,7 @@ export default function MeetDwight() {
               Dynamic Role Support
             </h2>
             <p className="text-center mb-12 max-w-3xl mx-auto text-white">
-              Dwight dynamically adjusts to your team's needs, offering specific support for each role. Whether you're a Creative Director, Account Manager, or Strategy Lead, Dwight provides insights, organises tasks, and helps your team achieve their goals.
+              Dwight dynamically adjusts to your team&apos;s needs, offering specific support for each role. Whether you&apos;re a Creative Director, Account Manager, or Strategy Lead, Dwight provides insights, organises tasks, and helps your team achieve their goals.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <RoleSupport 
@@ -139,10 +139,10 @@ export default function MeetDwight() {
         <section className="py-12 bg-[#B8A9C9]">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-['American_Typewriter'] font-normal text-3xl mb-6 text-[#370300]">
-              Why Dwight's Personality Matters
+              Why Dwight&apos;s Personality Matters
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-[#370300]">
-              With Dwight, you gain more than an AI tool—you get a trusted Agent. Dwight's personality brings an element of reliability, organisation, and thoroughness that helps your team feel supported at every stage.
+              With Dwight, you gain more than an AI tool—you get a trusted Agent. Dwight&apos;s personality brings an element of reliability, organisation, and thoroughness that helps your team feel supported at every stage.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
@@ -153,12 +153,12 @@ export default function MeetDwight() {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <Brain className="w-12 h-12 mb-4 text-[#005F73] mx-auto" />
                 <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#005F73]">Detailed Knowledge</h3>
-                <p className="text-[#370300]">Dwight's understanding of your business makes it a valuable resource for quick answers and deep insights.</p>
+                <p className="text-[#370300]">Dwight&apos;s understanding of your business makes it a valuable resource for quick answers and deep insights.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <Zap className="w-12 h-12 mb-4 text-[#005F73] mx-auto" />
                 <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#005F73]">Adaptable Reliability</h3>
-                <p className="text-[#370300]">As your business grows, Dwight grows with you, adapting to your team's evolving needs.</p>
+                <p className="text-[#370300]">As your business grows, Dwight grows with you, adapting to your team&apos;s evolving needs.</p>
               </div>
             </div>
           </div>

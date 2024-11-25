@@ -45,7 +45,7 @@ export default function Solutions() {
               Tailored AI Agents for Any Industry
             </h1>
             <p className="font-sans text-xl mb-8 max-w-3xl mx-auto text-[#370300]">
-              Whether in advertising, finance, retail, or corporate environments, Dwight Agents are designed to meet the specific needs of your industry. Each Agent is customised to support your team's goals, processes, and client relationships, making it a valuable asset across all sectors.
+              Whether in advertising, finance, retail, or corporate environments, Dwight Agents are designed to meet the specific needs of your industry. Each Agent is customised to support your team&apos;s goals, processes, and client relationships, making it a valuable asset across all sectors.
             </p>
           </div>
         </section>
@@ -104,16 +104,16 @@ export default function Solutions() {
               Why Dwight Agents Work Across Industries
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-white">
-              Each Dwight Agent is built on a foundation of customisable support, making it capable of adapting to your industry's specific requirements. From structured finance environments to dynamic retail operations, Dwight Agents bring value as a dependable, knowledgeable partner.
+              Each Dwight Agent is built on a foundation of customisable support, making it capable of adapting to your industry&apos;s specific requirements. From structured finance environments to dynamic retail operations, Dwight Agents bring value as a dependable, knowledgeable partner.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#005F73]">Industry-Specific Adaptation</h3>
-                <p className="text-[#370300]">Agents are trained to fit your industry's demands, processes, and goals.</p>
+                <p className="text-[#370300]">Agents are trained to fit your industry&apos;s demands, processes, and goals.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#005F73]">Scalable Solutions</h3>
-                <p className="text-[#370300]">Dwight's customisable framework allows Agents to scale with your business.</p>
+                <p className="text-[#370300]">Dwight&apos;s customisable framework allows Agents to scale with your business.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#005F73]">Role Flexibility</h3>
@@ -126,7 +126,7 @@ export default function Solutions() {
         <section className="py-12 bg-[#FFCB1F]">
           <div className="container mx-auto px-4 text-center">
             <p className="text-3xl font-['American_Typewriter'] italic text-[#370300]">
-              "Dwight adapts to your industry's needs, supporting your team like one of its own."
+              "Dwight adapts to your industry&apos;s needs, supporting your team like one of its own."
             </p>
           </div>
         </section>

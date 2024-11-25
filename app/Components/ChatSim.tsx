@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 
 const messages = [
   { sender: 'Ryan', content: "Hi Dwight, this is Ryan." },
@@ -14,7 +15,6 @@ export default function Component() {
   const [currentText, setCurrentText] = useState('')
   const [messageIndex, setMessageIndex] = useState(0)
   const [charIndex, setCharIndex] = useState(0)
-  const [isTyping, setIsTyping] = useState(true)
   const [showCTA, setShowCTA] = useState(false)
   const [showFinalHeading, setShowFinalHeading] = useState(false)
   const chatContainerRef = useRef<HTMLDivElement>(null)
@@ -57,7 +57,7 @@ export default function Component() {
       <div className="max-w-2xl w-full p-6 bg-white rounded-lg shadow-xl space-y-4">
         <div className="flex items-center justify-center mb-6">
           <div className="w-20 h-20 relative overflow-hidden rounded-full">
-            <img
+            <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dwight_Logo-Mark.jpg-9yZh4vUNeAMA0qOFCjoGduzcQJjHOX.jpeg"
               alt="Dwight Logo"
               className="w-full h-full object-cover"
@@ -92,7 +92,7 @@ export default function Component() {
               </div>
               {message.sender === 'Ryan' && (
                 <div className="w-8 h-8 rounded-full bg-[#68705C] flex items-center justify-center flex-shrink-0 overflow-hidden">
-                  <img
+                  <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dwight_Ryan-J2ql9gmHXA2U6r1Rx5EOzpkcUWI4Oo.svg"
                     alt="Ryan Avatar"
                     className="w-full h-full object-cover"
@@ -105,7 +105,7 @@ export default function Component() {
           {currentText && (
             <div className="flex items-start space-x-3 animate-fade-in">
               <div className="w-8 h-8 rounded-full bg-[#FFCB1F] flex items-center justify-center flex-shrink-0 overflow-hidden">
-                <img
+                <Image
                   src={messages[messageIndex].sender === 'Dwight' 
                     ? "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dwight_Logo-Mark.jpg-9yZh4vUNeAMA0qOFCjoGduzcQJjHOX.jpeg"
                     : "/placeholder.svg?height=32&width=32"}

@@ -27,7 +27,7 @@ export default function HowItWorks() {
               Creating Your Custom AI Agent
             </h1>
             <p className="font-sans text-xl mb-8 max-w-3xl mx-auto text-[#370300]">
-              Every Dwight Agent is designed to know your business inside out. From your first consultation through to ongoing support, our process ensures each Agent is tailored to your team's specific needs and goals.
+              Every Dwight Agent is designed to know your business inside out. From your first consultation through to ongoing support, our process ensures each Agent is tailored to your team&apos;s specific needs and goals.
             </p>
           </div>
         </section>
@@ -51,7 +51,7 @@ export default function HowItWorks() {
                 icon={Zap}
                 title="Integrating with Your Team"
                 description="Once trained, your Dwight Agent is deployed and integrated into your daily workflows. Our team provides onboarding to ensure a smooth transition, guiding users on how to interact with the Agent effectively."
-                outcome="A fully integrated Agent that aligns with your team's daily tasks and goals."
+                outcome="A fully integrated Agent that aligns with your teams daily tasks and goals."
               />
               <ProcessStep 
                 icon={RefreshCw}
@@ -69,13 +69,13 @@ export default function HowItWorks() {
               Why This Process Matters
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-white">
-              Unlike off-the-shelf AI tools, Dwight Agents are custom-built from the ground up to align with your business's specific dynamics. This process guarantees an Agent that supports your team as if it were part of your business.
+              Unlike off-the-shelf AI tools, Dwight Agents are custom-built from the ground up to align with your business&apos;s specific dynamics. This process guarantees an Agent that supports your team as if it were part of your business.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <Target className="w-12 h-12 mb-4 text-[#005F73] mx-auto" />
                 <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#005F73]">Tailored Fit</h3>
-                <p className="text-[#370300]">Each Agent is unique, trained to match your business's needs.</p>
+                <p className="text-[#370300]">Each Agent is unique, trained to match your business&apos;s needs.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <Sliders className="w-12 h-12 mb-4 text-[#005F73] mx-auto" />

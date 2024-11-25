@@ -92,7 +92,7 @@ export default function ProductSuite() {
               AI Agents for Any Business
             </h2>
             <p className="text-center mb-8 max-w-3xl mx-auto text-white">
-              From HR to finance, Dwight's Agents bring custom-trained support to any business function, providing knowledge and insight where your team needs it most.
+              From HR to finance, Dwight&apos;s Agents bring custom-trained support to any business function, providing knowledge and insight where your team needs it most.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <BusinessAgentCard 
@@ -145,7 +145,7 @@ export default function ProductSuite() {
               Why Choose Custom AI Agents?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-[#370300]">
-              Dwight Agents are more than AI tools—they're trained specifically to know your team's needs, processes, and goals, offering true value by acting as knowledgeable partners in your day-to-day operations.
+              Dwight Agents are more than AI tools—they&apos;re trained specifically to know your team&apos;s needs, processes, and goals, offering true value by acting as knowledgeable partners in your day-to-day operations.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-[#005F73] p-6 rounded-lg shadow-md text-white">
@@ -156,7 +156,7 @@ export default function ProductSuite() {
               <div className="bg-[#E07A5F] p-6 rounded-lg shadow-md text-white">
                 <Zap className="w-12 h-12 mb-4 text-[#370300] mx-auto" />
                 <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#370300]">Flexible Adaptation</h3>
-                <p>Each Agent's role is adaptable to your team's needs, making it a dynamic asset as your business evolves.</p>
+                <p>Each Agent&apos;s role is adaptable to your team&apos;s needs, making it a dynamic asset as your business evolves.</p>
               </div>
               <div className="bg-[#B8A9C9] p-6 rounded-lg shadow-md text-white">
                 <Users className="w-12 h-12 mb-4 text-[#005F73] mx-auto" />
