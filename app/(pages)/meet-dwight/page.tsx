@@ -14,7 +14,7 @@ interface FeatureCardProps {
 
 const FeatureCard: FC<FeatureCardProps> = ({ icon: Icon, title, description }) => (
   <div className="bg-[#005F73] p-6 rounded-lg shadow-md">
-    <Icon className="w-12 h-12 mb-4 text-[#370300]" />
+    <Icon />
     <h3 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#FFCB1F]">{title}</h3>
     <p className="text-sm text-white">{description}</p>
   </div>
