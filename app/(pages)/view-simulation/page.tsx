@@ -1,6 +1,3 @@
-'use client'
-
-import { useState } from 'react'
 import Navbar from '@/app/Components/Navbar'
 import ChatSim from '@/app/Components/ChatSim'
 import Footer from '@/app/Components/Footer'
