@@ -5,38 +5,59 @@ import { Briefcase, BarChart, ShoppingBag, Globe, ChevronDown, ChevronUp } from 
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
 
-export default function Solutions() {
-  const [expandedSection, setExpandedSection] = useState(null)
+interface IndustrySectionProps {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; // Type for the icon prop
+  title: string;
+  description: string;
+  agents: string[];
+  isExpanded: boolean; // Add prop to indicate if the section is expanded
+  onToggle: () => void; // Add prop for the toggle function
+}
 
-  const IndustrySection = ({ icon: Icon, title, description, agents }) => {
-    const isExpanded = expandedSection === title
-    return (
-      <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-        <div className="flex items-center justify-between cursor-pointer" onClick={() => setExpandedSection(isExpanded ? null : title)}>
-          <div className="flex items-center">
-            <Icon className="w-8 h-8 mr-4 text-[#005F73]" />
-            <h3 className="font-['American_Typewriter'] font-normal text-2xl text-[#370300]">{title}</h3>
-          </div>
-          {isExpanded ? <ChevronUp className="w-6 h-6 text-[#370300]" /> : <ChevronDown className="w-6 h-6 text-[#370300]" />}
+const IndustrySection: React.FC<IndustrySectionProps> = ({ icon: Icon, title, description, agents, isExpanded, onToggle }) => {
+  return (
+    <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+      <div
+        className="flex items-center justify-between cursor-pointer"
+        onClick={onToggle} // Use the passed onToggle function
+      >
+        <div className="flex items-center">
+          <Icon className="w-8 h-8 mr-4 text-[#005F73]" />
+          <h3 className="font-['American_Typewriter'] font-normal text-2xl text-[#370300]">{title}</h3>
         </div>
-        {isExpanded && (
-          <div className="mt-4">
-            <p className="text-[#370300] mb-4">{description}</p>
-            <h4 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#005F73]">Relevant Agents:</h4>
-            <ul className="list-disc pl-5">
-              {agents.map((agent, index) => (
-                <li key={index} className="text-[#370300] mb-2">{agent}</li>
-              ))}
-            </ul>
-          </div>
+        {isExpanded ? (
+          <ChevronUp className="w-6 h-6 text-[#370300]" />
+        ) : (
+          <ChevronDown className="w-6 h-6 text-[#370300]" />
         )}
       </div>
-    )
-  }
+      {isExpanded && (
+        <div className="mt-4">
+          <p className="text-[#370300] mb-4">{description}</p>
+          <h4 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#005F73]">Relevant Agents:</h4>
+          <ul className="list-disc pl-5">
+            {agents.map((agent, index) => (
+              <li key={index} className="text-[#370300] mb-2">
+                {agent}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default function Solutions() {
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+
+  const handleToggleSection = (title: string) => {
+    setExpandedSection(prev => (prev === title ? null : title)); // Toggle the section
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
-        <Navbar />
+      <Navbar />
       <main className="flex-grow">
         <section className="bg-[#FFCB1F] py-12 md:py-24">
           <div className="container mx-auto px-4 text-center">
@@ -51,7 +72,7 @@ export default function Solutions() {
 
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
-            <IndustrySection 
+            <IndustrySection
               icon={Briefcase}
               title="Built for Agencies"
               description="Dwight's Agents are specially designed to support advertising and creative teams. From managing creative workflows to tracking client feedback and coordinating production timelines, each Agent is equipped to handle the fast-paced demands of agency life."
@@ -60,9 +81,11 @@ export default function Solutions() {
                 "Creative Ops Specialist Agent: Supports creative teams with asset organisation, deadline tracking, and brand alignment.",
                 "Client Service Agent: Manages client relationships and provides insights based on client interactions and feedback."
               ]}
+              isExpanded={expandedSection === 'Built for Agencies'}
+              onToggle={() => handleToggleSection('Built for Agencies')}
             />
 
-            <IndustrySection 
+            <IndustrySection
               icon={BarChart}
               title="Empowering Financial Precision"
               description="In finance and corporate sectors, Dwight Agents are trained to support teams with critical processes, from budget management to reporting and compliance. Each Agent is tailored to understand and support your financial operations."
@@ -71,9 +94,11 @@ export default function Solutions() {
                 "Operations & Workflow Optimiser Agent: Coordinates tasks and milestones to ensure efficient project flow.",
                 "Data Analyst & Reporting Agent: Provides insights from data, helping track performance and identify trends."
               ]}
+              isExpanded={expandedSection === 'Empowering Financial Precision'}
+              onToggle={() => handleToggleSection('Empowering Financial Precision')}
             />
 
-            <IndustrySection 
+            <IndustrySection
               icon={ShoppingBag}
               title="Optimising Retail Operations"
               description="From managing customer relationships to tracking sales trends, Dwight Agents are designed to support the dynamic needs of retail and e-commerce businesses, helping you streamline workflows and enhance customer experiences."
@@ -82,9 +107,11 @@ export default function Solutions() {
                 "Operations & Workflow Optimiser Agent: Improves operational efficiency by managing inventory, scheduling, and resource allocation.",
                 "Data Analyst & Reporting Agent: Offers data-driven insights to understand customer behaviour and optimise inventory management."
               ]}
+              isExpanded={expandedSection === 'Optimising Retail Operations'}
+              onToggle={() => handleToggleSection('Optimising Retail Operations')}
             />
 
-            <IndustrySection 
+            <IndustrySection
               icon={Globe}
               title="Adaptable to Any Industry"
               description="Dwight Agents are designed to integrate with any business function, supporting HR, training, sales, or operations teams with insights and tools tailored to your organisation's specific needs."
@@ -93,6 +120,8 @@ export default function Solutions() {
                 "HR & Talent Management Agent: Supports recruitment, employee engagement, and development tracking.",
                 "Training & Development Facilitator Agent: Coordinates training sessions, tracks progress, and manages resources for employee development."
               ]}
+              isExpanded={expandedSection === 'Adaptable to Any Industry'}
+              onToggle={() => handleToggleSection('Adaptable to Any Industry')}
             />
           </div>
         </section>
@@ -125,7 +154,7 @@ export default function Solutions() {
         <section className="py-12 bg-[#FFCB1F]">
           <div className="container mx-auto px-4 text-center">
             <p className="text-3xl font-['American_Typewriter'] italic text-[#370300]">
-            &quot;Dwight adapts to your industry&apos;s needs, supporting your team like one of its own.&quot;
+              &quot;Dwight adapts to your industry&apos;s needs, supporting your team like one of its own.&quot;
             </p>
           </div>
         </section>
@@ -133,5 +162,5 @@ export default function Solutions() {
 
       <Footer />
     </div>
-  )
+  );
 }

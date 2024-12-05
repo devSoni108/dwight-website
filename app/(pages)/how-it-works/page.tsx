@@ -1,11 +1,29 @@
 'use client';
 
-import { Handshake, Cog, Zap, RefreshCw, Target, Sliders, PuzzleIcon as PuzzlePiece } from 'lucide-react';
+import {
+  Handshake,
+  Cog,
+  Zap,
+  RefreshCw,
+  Target,
+  Sliders,
+  PuzzleIcon as PuzzlePiece,
+} from 'lucide-react';
 import Navbar from '@/app/Components/Navbar';
 import Footer from '@/app/Components/Footer';
 
 export default function HowItWorks() {
-  const ProcessStep = ({ icon: Icon, title, description, outcome }) => (
+  const ProcessStep = ({
+    icon: Icon,
+    title,
+    description,
+    outcome,
+  }: {
+    icon: React.ComponentType<{ className?: string; 'aria-label'?: string }>;
+    title: string;
+    description: string;
+    outcome: string;
+  }) => (
     <div className="bg-white p-6 rounded-lg shadow-md">
       <Icon className="w-12 h-12 mb-4 text-[#005F73] mx-auto" aria-label={title} />
       <h3 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#370300] text-center">{title}</h3>
