@@ -1,9 +1,7 @@
 'use client'
 
-import Link from 'next/link'
-import Image from 'next/image'
 import { useState } from 'react'
-import { Menu, Briefcase, BarChart, ShoppingBag, Globe, ChevronDown, ChevronUp } from 'lucide-react'
+import { Briefcase, BarChart, ShoppingBag, Globe, ChevronDown, ChevronUp } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
 
@@ -127,7 +125,7 @@ export default function Solutions() {
         <section className="py-12 bg-[#FFCB1F]">
           <div className="container mx-auto px-4 text-center">
             <p className="text-3xl font-['American_Typewriter'] italic text-[#370300]">
-              "Dwight adapts to your industry&apos;s needs, supporting your team like one of its own."
+            &quot;Dwight adapts to your industry&apos;s needs, supporting your team like one of its own.&quot;
             </p>
           </div>
         </section>

@@ -146,7 +146,7 @@ export default function MeetDwight() {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <Users className="w-12 h-12 mb-4 text-[#005F73] mx-auto" />
                 <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#005F73]">Consistent Support</h3>
-                <p className="text-[#370300]">No matter the role, Dwight's approach ensures every team member gets exactly the help they need.</p>
+                <p className="text-[#370300]">No matter the role, Dwight&apos;s approach ensures every team member gets exactly the help they need.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <Brain className="w-12 h-12 mb-4 text-[#005F73] mx-auto" />
@@ -165,7 +165,7 @@ export default function MeetDwight() {
         <section className="py-12 bg-[#FFCB1F]">
           <div className="container mx-auto px-4 text-center">
             <p className="text-3xl font-['American_Typewriter'] italic text-[#370300]">
-              "A dependable AI Agent with the knowledge of an experienced team member."
+            &quot;A dependable AI Agent with the knowledge of an experienced team member.&quot;
             </p>
           </div>
         </section>

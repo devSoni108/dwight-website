@@ -2,15 +2,11 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
-import { Menu, Send, Brain, Users, Lightbulb, Rocket } from 'lucide-react'
+import { Brain, Users, Lightbulb, Rocket } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [chatOpen, setChatOpen] = useState(false)
-
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
