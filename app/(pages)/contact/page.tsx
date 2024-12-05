@@ -1,5 +1,6 @@
 'use client'
 
+import Footer from "@/app/Components/Footer"
 import Navbar from "@/app/Components/Navbar"
 
 const Contact = () => {
@@ -7,6 +8,7 @@ const Contact = () => {
         <main>
             <Navbar />
             Contact Us
+            <Footer />
         </main>
     )
 }

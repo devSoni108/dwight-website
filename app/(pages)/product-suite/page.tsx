@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { Briefcase, Users, Brain, Zap, Rocket, BarChart, BookOpen } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
+import Footer from '@/app/Components/Footer'
 
 export default function ProductSuite() {
 
@@ -168,11 +169,7 @@ export default function ProductSuite() {
         </section>
       </main>
 
-      <footer className="bg-[#370300] text-white">
-        <div className="container mx-auto px-4 py-6 text-center">
-          <p className="font-['American_Typewriter'] font-normal">© 2024 Dwight (Pty) Ltd. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

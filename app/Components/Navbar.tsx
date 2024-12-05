@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="bg-[#370300] text-[#FFCB1F]">
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold">
+        <Link href="/home" className="text-2xl font-bold">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dwight_Menu-Logo-7rModLJ8v6SmgmlvAkASYgcjobPVx1.svg"
             alt="Dwight"
@@ -44,6 +44,11 @@ const Navbar = () => {
             <li>
               <Link href="/meet-dwight" className="hover:underline font-['American_Typewriter'] font-normal">
                 Meet Dwight
+              </Link>
+            </li>
+            <li>
+              <Link href="/view-simulation" className="hover:underline font-['American_Typewriter'] font-normal">
+                View Simulation
               </Link>
             </li>
           </ul>

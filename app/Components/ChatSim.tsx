@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const messages = [
   { sender: 'Ryan', content: "Hi Dwight, this is Ryan." },
@@ -10,7 +11,7 @@ const messages = [
   { sender: 'Dwight', content: "Once you've reviewed the brief, reach out to Angela Martin (Traffic Manager) via Teams to confirm the deadline. Let me know if you have any other questions—I'm here to help." }
 ]
 
-export default function Component() {
+export default function ChatSim() {
   const [displayedMessages, setDisplayedMessages] = useState<typeof messages>([])
   const [currentText, setCurrentText] = useState('')
   const [messageIndex, setMessageIndex] = useState(0)
@@ -60,6 +61,8 @@ export default function Component() {
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dwight_Logo-Mark.jpg-9yZh4vUNeAMA0qOFCjoGduzcQJjHOX.jpeg"
               alt="Dwight Logo"
+              width={100}
+              height={100}
               className="w-full h-full object-cover"
             />
           </div>
@@ -70,9 +73,11 @@ export default function Component() {
             <div key={index} className={`flex items-start space-x-3 animate-fade-in ${message.sender === 'Ryan' ? 'justify-end' : ''}`}>
               {message.sender === 'Dwight' && (
                 <div className="w-8 h-8 rounded-full bg-[#FFCB1F] flex items-center justify-center flex-shrink-0 overflow-hidden">
-                  <img
+                  <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dwight_Logo-Mark.jpg-9yZh4vUNeAMA0qOFCjoGduzcQJjHOX.jpeg"
                     alt="Dwight Logo"
+                    width={100}
+                    height={100}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -95,6 +100,8 @@ export default function Component() {
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dwight_Ryan-J2ql9gmHXA2U6r1Rx5EOzpkcUWI4Oo.svg"
                     alt="Ryan Avatar"
+                    width={100}
+                    height={100}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -110,6 +117,8 @@ export default function Component() {
                     ? "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dwight_Logo-Mark.jpg-9yZh4vUNeAMA0qOFCjoGduzcQJjHOX.jpeg"
                     : "/placeholder.svg?height=32&width=32"}
                   alt={`${messages[messageIndex].sender} avatar`}
+                  width={100}
+                  height={100}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -134,17 +143,18 @@ export default function Component() {
 
         {showCTA && (
           <div className="flex justify-center mt-6">
-            <a 
+          <Link href="/home" passHref
               className="px-6 py-2 text-lg font-semibold rounded-full transition-colors duration-200"
               style={{ 
                 backgroundColor: '#370300', 
                 color: '#FFCB1F',
                 fontFamily: 'Arial, sans-serif',
+                textDecoration: 'none',
               }}
             >
               Meet Dwight
-            </a>
-          </div>
+          </Link>
+        </div>        
         )}
       </div>
       <style jsx>{`
