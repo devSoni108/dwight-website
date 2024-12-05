@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Briefcase, Users, Brain, Zap, Rocket, BarChart, BookOpen, LucideIcon } from 'lucide-react'
+import { Briefcase, Users, Brain, Zap, Rocket, LucideIcon } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
 
@@ -16,14 +16,6 @@ const AgentCard = ({ icon: Icon, title, description }: AgentCardProps) => (
     <Icon className="w-12 h-12 mb-4 text-[#FFCB1F]" />
     <h3 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#FFCB1F]">{title}</h3>
     <p className="text-sm text-white">{description}</p>
-  </div>
-)
-
-const BusinessAgentCard = ({ icon: Icon, title, description }: AgentCardProps) => (
-  <div className="bg-white p-6 rounded-lg shadow-md">
-    <Icon className="w-12 h-12 mb-4 text-[#370300]" />
-    <h3 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#370300]">{title}</h3>
-    <p className="text-sm text-[#370300]">{description}</p>
   </div>
 )
 
