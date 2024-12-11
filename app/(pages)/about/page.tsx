@@ -1,5 +1,4 @@
-import Image from 'next/image'
-import { Brain, Users, Rocket } from 'lucide-react'
+import { Brain, Users, Rocket, CircleUser } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
 
@@ -73,16 +72,10 @@ export default function About() {
                 { name: "Shamesh Padayachy", role: "Founder & Chief Agent Architect", description: "The visionary behind Dwight, Shamesh leads the design of custom AI Agents with a unique focus on aligning AI with real business needs." },
                 { name: "Derryn de la Querra", role: "Business Development Director", description: "Derryn ensures that each client's specific goals and needs are deeply understood, connecting businesses to the right Dwight Agent." },
                 { name: "Michelle Smuts", role: "Finance Director", description: "Michelle oversees financial strategy and advises on financial dataset integrations, supporting the financial applications of Dwight Agents." },
-                { name: "Andrew Murton", role: "Content & Quality Specialist", description: "Andrew ensures each Agent is refined, clear, and effective, providing quality control for the content and interactions within our AI solutions." }
+                { name: "Andrew Murton", role: "Content & Quality Specialist", description: "Andrew ensures each Agent is clear, refined, and effective, with a human eye providing quality control over every interaction and piece of content in our AI solutions." }
               ].map((member, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                  <Image
-                    src={`/placeholder.svg?height=150&width=150`}
-                    alt={member.name}
-                    width={150}
-                    height={150}
-                    className="rounded-full mx-auto mb-4"
-                  />
+                  <CircleUser className="rounded-full mx-auto mb-4 w-36 h-36 text-[#370300]" />
                   <h3 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#370300] text-center">{member.name}</h3>
                   <p className="font-bold mb-4 text-[#005F73] text-center">{member.role}</p>
                   <p className="text-sm text-[#370300]">{member.description}</p>

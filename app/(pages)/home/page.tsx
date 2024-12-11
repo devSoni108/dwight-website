@@ -109,9 +109,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
-      {/* Chat Bot Interface */}
-      
+      <Footer />      
     </div>
   )
 }

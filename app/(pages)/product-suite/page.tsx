@@ -1,11 +1,17 @@
 'use client'
 
 import Link from 'next/link'
-import { Briefcase, Users, Brain, Zap, Rocket, LucideIcon } from 'lucide-react'
+import { LucideIcon, Briefcase, Users, Brain, Zap, Rocket, BarChart, BookOpen } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
 
 type AgentCardProps = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+type BusinessAgentCardProps = {
   icon: LucideIcon;
   title: string;
   description: string;
@@ -16,6 +22,14 @@ const AgentCard = ({ icon: Icon, title, description }: AgentCardProps) => (
     <Icon className="w-12 h-12 mb-4 text-[#FFCB1F]" />
     <h3 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#FFCB1F]">{title}</h3>
     <p className="text-sm text-white">{description}</p>
+  </div>
+)
+
+const BusinessAgentCard = ({ icon: Icon, title, description }: BusinessAgentCardProps) => (
+  <div className="bg-white p-6 rounded-lg shadow-md">
+    <Icon className="w-12 h-12 mb-4 text-[#370300]" />
+    <h3 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#370300]">{title}</h3>
+    <p className="text-sm text-[#370300]">{description}</p>
   </div>
 )
 
@@ -77,15 +91,93 @@ export default function ProductSuite() {
               />
             </div>
             <div className="text-center mt-8">
-              <Link href="/advertising-agents" className="inline-block bg-[#005F73] text-[#FFCB1F] hover:bg-[#005F73]/90 px-6 py-3 rounded font-bold">
+              <Link href="/contact" className="inline-block bg-[#005F73] text-[#FFCB1F] hover:bg-[#005F73]/90 px-6 py-3 rounded font-bold">
                 Learn More About Advertising-Specific Agents
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Other sections */}
-        
+        <section className="py-12 bg-[#6B705C]">
+          <div className="container mx-auto px-4">
+            <h2 className="font-['American_Typewriter'] font-normal text-3xl mb-8 text-center text-[#FFCB1F]">
+              AI Agents for Any Business
+            </h2>
+            <p className="text-center mb-8 max-w-3xl mx-auto text-white">
+              From HR to finance, Dwight&apos;s Agents bring custom-trained support to any business function, providing knowledge and insight where your team needs it most.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <BusinessAgentCard 
+                icon={Briefcase}
+                title="Executive Assistant Agent"
+                description="Provides schedule management, document preparation, and task tracking to support busy executives."
+              />
+              <BusinessAgentCard 
+                icon={Users}
+                title="HR & Talent Management Agent"
+                description="Organises recruitment processes, tracks employee development, and manages engagement metrics."
+              />
+              <BusinessAgentCard 
+                icon={BarChart}
+                title="Finance & Budget Analyst Agent"
+                description="Tracks financial metrics, prepares budget reports, and monitors expenses."
+              />
+              <BusinessAgentCard 
+                icon={Users}
+                title="Sales & CRM Agent"
+                description="Supports sales teams by managing customer relationships, tracking sales pipelines, and identifying upsell opportunities."
+              />
+              <BusinessAgentCard 
+                icon={Zap}
+                title="Operations & Workflow Optimiser Agent"
+                description="Tracks tasks, milestones, and resources to improve overall operational efficiency."
+              />
+              <BusinessAgentCard 
+                icon={BarChart}
+                title="Data Analyst & Reporting Agent"
+                description="Provides insights from data, tracking key performance indicators and spotting trends."
+              />
+              <BusinessAgentCard 
+                icon={BookOpen}
+                title="Training & Development Facilitator Agent"
+                description="Coordinates training sessions, tracks employee progress, and provides development resources."
+              />
+            </div>
+            <div className="text-center mt-8">
+              <Link href="/contact" className="inline-block bg-[#FFCB1F] text-[#370300] hover:bg-[#FFCB1F]/90 px-6 py-3 rounded font-bold">
+                Explore All Business Agents
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-[#FFCB1F]">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-['American_Typewriter'] font-normal text-3xl mb-6 text-[#370300]">
+              Why Choose Custom AI Agents?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto text-[#370300]">
+              Dwight Agents are more than AI tools—they&apos;re trained specifically to know your team&apos;s needs, processes, and goals, offering true value by acting as knowledgeable partners in your day-to-day operations.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-[#005F73] p-6 rounded-lg shadow-md text-white">
+                <Brain className="w-12 h-12 mb-4 text-[#FFCB1F] mx-auto" />
+                <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#FFCB1F]">Custom Knowledge</h3>
+                <p>Agents trained on your unique datasets provide unparalleled insight and support.</p>
+              </div>
+              <div className="bg-[#E07A5F] p-6 rounded-lg shadow-md text-white">
+                <Zap className="w-12 h-12 mb-4 text-[#370300] mx-auto" />
+                <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#370300]">Flexible Adaptation</h3>
+                <p>Each Agent&apos;s role is adaptable to your team&apos;s needs, making it a dynamic asset as your business evolves.</p>
+              </div>
+              <div className="bg-[#B8A9C9] p-6 rounded-lg shadow-md text-white">
+                <Users className="w-12 h-12 mb-4 text-[#005F73] mx-auto" />
+                <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#005F73]">Comprehensive Role Support</h3>
+                <p>From executive support to client services, Dwight Agents enhance productivity across all business functions.</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />

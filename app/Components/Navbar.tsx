@@ -48,7 +48,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link href="/view-simulation" className="hover:underline font-['American_Typewriter'] font-normal">
-                View Simulation
+                Replay Intro
               </Link>
             </li>
           </ul>
