@@ -19,7 +19,6 @@ export default function Component() {
   const [currentText, setCurrentText] = useState('')
   const [messageIndex, setMessageIndex] = useState(0)
   const [charIndex, setCharIndex] = useState(0)
-  const [isTyping, setIsTyping] = useState(true)
   const [showCTA, setShowCTA] = useState(false)
   const [showFinalHeading, setShowFinalHeading] = useState(false)
   const chatContainerRef = useRef<HTMLDivElement>(null)
