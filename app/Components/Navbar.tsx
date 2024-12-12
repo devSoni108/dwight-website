@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Menu } from "lucide-react";
+import DwightMenu from '../../public/Dwight_Menu-Logo.svg';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
         <Link href="/home" className="text-2xl font-bold">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dwight_Menu-Logo-7rModLJ8v6SmgmlvAkASYgcjobPVx1.svg"
+            src={DwightMenu}
             alt="Dwight"
             width={100}
             height={40}

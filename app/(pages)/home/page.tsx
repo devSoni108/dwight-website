@@ -6,6 +6,8 @@ import { Brain, Users, Lightbulb, Rocket } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
 
+import DwightLogo from '../../../public/Dwight_Main-Logo.svg'
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -14,7 +16,7 @@ export default function Home() {
         <section className="bg-[#FFCB1F] py-12 md:py-24">
           <div className="container mx-auto px-4 text-center">
             <Image 
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dwight_Main-Logo-rOqPTRP0K0PTbXNp3LBmbLptpPbTXs.svg"
+              src={DwightLogo}
               alt="Dwight"
               width={200}
               height={200}
