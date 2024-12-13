@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 
 import DwightLogo from '../../public/Dwight_Logo-Mark.jpeg'
