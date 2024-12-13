@@ -101,7 +101,7 @@ export default function About() {
                 Choosing Dwight means choosing a custom AI solution that knows your business as well as your team does. Each Agent is trained to meet your specific goals, support your team&apos;s unique dynamics, and scale with your business&apos;s growth.
               </p>
             </div>
-            <p className="text-3xl font-['American_Typewriter'] text-[#370300] mt-8">
+            <p className="text-3xl font-['American_Typewriter'] text-[#370300] mt-8 italic">
             &quot;An AI Agent that truly knows your business—supporting your team like one of their own.&quot;
             </p>
           </div>

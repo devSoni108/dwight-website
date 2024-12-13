@@ -8,9 +8,6 @@ export default function Home() {
       <Navbar />
       <ChatSim />
       <Footer />
-
-      {/* Chat Bot Interface */}
-
     </div>
   )
 }

@@ -103,7 +103,7 @@ export default function Home() {
               </div>
             </div>
             <Link 
-              href="/product-suite"
+              href="/how-it-works"
               className="mt-8 inline-block bg-[#FFCB1F] text-[#370300] hover:bg-[#FFCB1F]/90 font-sans font-bold px-6 py-3 rounded"
             >
               Explore All Agents

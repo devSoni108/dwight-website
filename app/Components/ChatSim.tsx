@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 import DwightLogo from '../../public/Dwight_Logo-Mark.jpeg'
 import Ryan from '../../public/Dwight_Ryan.svg'
+import Keyboard from '../../public/keyboard.png'
 
 const messages = [
   { sender: 'Ryan', content: "Hi Dwight, this is Ryan." },
@@ -26,7 +27,7 @@ export default function Component() {
   useEffect(() => {
     if (messageIndex >= messages.length) {
       setShowCTA(true)
-      setTimeout(() => setShowFinalHeading(true), 1000)
+      setTimeout(() => setShowFinalHeading(true), 100)
       return
     }
 
@@ -113,7 +114,7 @@ export default function Component() {
             <div className="flex items-start space-x-3 animate-fade-in">
               <div className="w-8 h-8 rounded-full bg-[#FFCB1F] flex items-center justify-center flex-shrink-0 overflow-hidden">
                 <Image
-                  src={DwightLogo}
+                  src={Keyboard}
                   alt="Dwight"
                   width={100}
                   height={40}
@@ -140,8 +141,9 @@ export default function Component() {
         )}
 
         {showCTA && (
-          <div className="flex justify-center mt-6">
-            <Button 
+          <div className="flex justify-center mt-6 animate-fade-in">
+            <a
+              href='home'
               className="px-6 py-2 text-lg font-semibold rounded-full transition-colors duration-200"
               style={{ 
                 backgroundColor: '#370300', 
@@ -150,7 +152,7 @@ export default function Component() {
               }}
             >
               Meet Dwight
-            </Button>
+            </a>
           </div>
         )}
       </div>
