@@ -7,11 +7,9 @@ import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
 
 import DwightLogo from '../../../public/Dwight_Main-Logo.svg'
-import { PageWrapper } from '@/app/Components/page-wrapper'
 
 export default function Home() {
   return (
-    <PageWrapper>
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">
@@ -114,6 +112,5 @@ export default function Home() {
       </main>
       <Footer />      
     </div>
-    </PageWrapper>
   )
 }

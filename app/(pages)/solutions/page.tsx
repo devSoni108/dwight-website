@@ -5,7 +5,6 @@ import { useState } from 'react'
 import { Briefcase, BarChart, ShoppingBag, Globe, ChevronDown, ChevronUp } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
-import { PageWrapper } from '@/app/Components/page-wrapper'
 
 interface IndustrySectionProps {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; // Type for the icon prop
@@ -58,7 +57,6 @@ export default function Solutions() {
   };
 
   return (
-    <PageWrapper>
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">
@@ -170,6 +168,5 @@ export default function Solutions() {
 
       <Footer />
     </div>
-    </PageWrapper>
   );
 }

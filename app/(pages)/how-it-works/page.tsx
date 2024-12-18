@@ -12,7 +12,6 @@ import {
 } from 'lucide-react';
 import Navbar from '@/app/Components/Navbar';
 import Footer from '@/app/Components/Footer';
-import { PageWrapper } from '@/app/Components/page-wrapper';
 
 export default function HowItWorks() {
   const ProcessStep = ({
@@ -40,7 +39,6 @@ export default function HowItWorks() {
   );
 
   return (
-    <PageWrapper>
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
@@ -135,6 +133,5 @@ export default function HowItWorks() {
 
       <Footer />
     </div>
-    </PageWrapper>
   );
 }

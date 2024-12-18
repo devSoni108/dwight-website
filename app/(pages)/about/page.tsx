@@ -3,11 +3,9 @@ import Link from 'next/link'
 import { Brain, Users, Rocket, CircleUser } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
-import { PageWrapper } from '@/app/Components/page-wrapper'
 
 export default function About() {
   return (
-    <PageWrapper>
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">
@@ -128,6 +126,5 @@ export default function About() {
 
       <Footer />
     </div>
-    </PageWrapper>
   )
 }

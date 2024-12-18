@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { LucideIcon, Briefcase, Users, Brain, Zap, Rocket, BarChart, BookOpen } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
-import { PageWrapper } from '@/app/Components/page-wrapper'
 
 type AgentCardProps = {
   icon: LucideIcon;
@@ -36,7 +35,6 @@ const BusinessAgentCard = ({ icon: Icon, title, description }: BusinessAgentCard
 
 export default function ProductSuite() {
   return (
-    <PageWrapper>
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
@@ -184,6 +182,5 @@ export default function ProductSuite() {
 
       <Footer />
     </div>
-    </PageWrapper>
   )
 }

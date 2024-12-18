@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { CheckSquare, BookOpen, Award, Users, Zap, Brain, Palette, UserCheck, LineChart } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
-import { PageWrapper } from '@/app/Components/page-wrapper'
 
 interface TraitProps {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -51,7 +50,6 @@ const Interaction: React.FC<InteractionProps> = ({ question, answer }) => (
 
 const MeetDwight: React.FC = () => {
   return (
-    <PageWrapper>
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
@@ -201,7 +199,6 @@ const MeetDwight: React.FC = () => {
 
       <Footer />
     </div>
-    </PageWrapper>
   )
 }
 
