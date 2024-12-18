@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import {
   Handshake,
   Cog,
@@ -11,22 +12,26 @@ import {
 } from 'lucide-react';
 import Navbar from '@/app/Components/Navbar';
 import Footer from '@/app/Components/Footer';
+import { PageWrapper } from '@/app/Components/page-wrapper';
 
 export default function HowItWorks() {
   const ProcessStep = ({
     icon: Icon,
+    step,
     title,
     description,
     outcome,
   }: {
     icon: React.ComponentType<{ className?: string; 'aria-label'?: string }>;
+    step: string;
     title: string;
     description: string;
     outcome: string;
   }) => (
     <div className="bg-white p-6 rounded-lg shadow-md">
       <Icon className="w-12 h-12 mb-4 text-[#005F73] mx-auto" aria-label={title} />
-      <h3 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#370300] text-center">{title}</h3>
+      <h3 className="font-['American_Typewriter'] font-semibold text-xl mb-2 text-[#370300] text-center">{step}</h3>
+      <h4 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#370300] text-center">{title}</h4>
       <p className="text-sm text-[#370300] mb-4">{description}</p>
       <div className="bg-[#FFCB1F] p-4 rounded">
         <p className="text-sm font-bold text-[#370300]">Intended Outcome: {outcome}</p>
@@ -35,6 +40,7 @@ export default function HowItWorks() {
   );
 
   return (
+    <PageWrapper>
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
@@ -57,29 +63,38 @@ export default function HowItWorks() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <ProcessStep
                 icon={Handshake}
+                step="Step 1"
                 title="Understanding Your Business"
                 description="Our journey begins with an in-depth consultation to capture your business's goals, client interactions, processes, and team structure. This foundational knowledge guides every aspect of your custom Agent's development."
                 outcome="A clear picture of your business needs, ensuring your Dwight Agent is built with precision."
               />
               <ProcessStep
                 icon={Cog}
+                step="Step 2"
                 title="Training Your Agent"
                 description="Each Agent is trained on datasets that reflect your business—whether it's your specific processes, client relationships, or team roles. This training gives Dwight Agents a unique ability to operate with the knowledge and understanding of an experienced team member."
                 outcome="An Agent that understands your business nuances and can support your team seamlessly."
               />
               <ProcessStep
                 icon={Zap}
+                step="Step 3"
                 title="Integrating with Your Team"
                 description="Once trained, your Dwight Agent is deployed and integrated into your daily workflows. Our team provides onboarding to ensure a smooth transition, guiding users on how to interact with the Agent effectively."
                 outcome="A fully integrated Agent that aligns with your team’s daily tasks and goals."
               />
               <ProcessStep
                 icon={RefreshCw}
+                step="Step 4"
                 title="Growing with Your Business"
                 description="As your business grows, so can your Dwight Agent. We offer ongoing support and can adapt or enhance your Agent to integrate with new tools or accommodate changing needs, ensuring it remains a valuable part of your team."
                 outcome="An adaptable Agent that evolves alongside your business."
               />
             </div>
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/product-suite" className="inline-block bg-[#005F73] text-[#FFCB1F] hover:bg-[#005F73]/90 px-6 py-3 rounded font-bold">
+              Learn More
+            </Link>
           </div>
         </section>
 
@@ -110,10 +125,16 @@ export default function HowItWorks() {
               </div>
             </div>
           </div>
+          <div className="text-center mt-8">
+            <Link href="/contact" className="inline-block bg-[#FFCB1F] text-[#370300] hover:bg-[#FFCB1F]/90 px-6 py-3 rounded font-bold">
+              Book A Demo
+            </Link>
+          </div>
         </section>
       </main>
 
       <Footer />
     </div>
+    </PageWrapper>
   );
 }

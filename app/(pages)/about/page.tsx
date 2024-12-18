@@ -1,9 +1,13 @@
+import Link from 'next/link'
+
 import { Brain, Users, Rocket, CircleUser } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
+import { PageWrapper } from '@/app/Components/page-wrapper'
 
 export default function About() {
   return (
+    <PageWrapper>
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">
@@ -15,6 +19,20 @@ export default function About() {
             <p className="font-sans text-xl mb-8 max-w-2xl mx-auto text-[#370300]">
               Building custom AI Agents that seamlessly integrate with your business, empowering your team with knowledge, insight, and support specific to your operations.
             </p>
+            <div className="flex justify-center space-x-4">
+              <Link 
+                href="/how-it-works"
+                className="bg-[#005F73] text-[#FFCB1F] hover:bg-[#005F73]/90 font-sans font-bold px-6 py-3 rounded"
+              >
+                How It Works
+              </Link>
+              <Link 
+                href="/contact"
+                className="bg-[#005F73] text-[#FFCB1F] hover:bg-[#005F73]/90 font-sans font-bold px-6 py-3 rounded"
+              >
+                Book a Demo
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -30,31 +48,6 @@ export default function About() {
               <p className="mb-6 text-lg">
                 Our vision is to bridge AI and business with solutions that truly know and support your team, helping you achieve goals with insight and precision.
               </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="font-['American_Typewriter'] font-normal text-3xl mb-8 text-center text-[#370300]">
-              The Dwight Approach
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-[#005F73] p-6 rounded-lg shadow-md text-white">
-                <Brain className="w-12 h-12 mb-4 text-[#FFCB1F]" />
-                <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#FFCB1F]">Customised Training</h3>
-                <p>Each Dwight Agent is trained on your business&apos;s specific datasets—from goals and client interactions to processes and staff roles—ensuring it supports your team as if it were a long-standing member.</p>
-              </div>
-              <div className="bg-[#E07A5F] p-6 rounded-lg shadow-md text-white">
-                <Users className="w-12 h-12 mb-4 text-[#370300]" />
-                <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#370300]">Beyond Automation</h3>
-                <p>Dwight Agents are more than task assistants. They become knowledgeable partners who can interact dynamically with your team, adapt to their needs, and grow alongside your business.</p>
-              </div>
-              <div className="bg-[#B8A9C9] p-6 rounded-lg shadow-md text-white">
-                <Rocket className="w-12 h-12 mb-4 text-[#005F73]" />
-                <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#005F73]">Future-Ready Flexibility</h3>
-                <p>As your business evolves, Dwight Agents are ready to integrate with new tools, processes, and APIs, offering a solution that scales with your success.</p>
-              </div>
             </div>
           </div>
         </section>
@@ -83,8 +76,33 @@ export default function About() {
               ))}
             </div>
             <p className="text-center mt-8 max-w-3xl mx-auto text-white">
-              As Dwight grows, our support team will include roles for development and client support, ensuring a seamless integration and ongoing success for each client.
+              With dedicated development and client support, Dwight ensures every integration is seamless, scalable, and built for lasting success.
             </p>
+          </div>
+        </section>
+
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="font-['American_Typewriter'] font-normal text-3xl mb-8 text-center text-[#370300]">
+              The Dwight Approach
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-[#005F73] p-6 rounded-lg shadow-md text-white">
+                <Brain className="w-12 h-12 mb-4 text-[#FFCB1F]" />
+                <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#FFCB1F]">Customised Training</h3>
+                <p>Each Dwight Agent is trained on your business&apos;s specific datasets—from goals and client interactions to processes and staff roles—ensuring it supports your team as if it were a long-standing member.</p>
+              </div>
+              <div className="bg-[#E07A5F] p-6 rounded-lg shadow-md text-white">
+                <Users className="w-12 h-12 mb-4 text-[#370300]" />
+                <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#370300]">Beyond Automation</h3>
+                <p>Dwight Agents are more than task assistants. They become knowledgeable partners who can interact dynamically with your team, adapt to their needs, and grow alongside your business.</p>
+              </div>
+              <div className="bg-[#B8A9C9] p-6 rounded-lg shadow-md text-white">
+                <Rocket className="w-12 h-12 mb-4 text-[#005F73]" />
+                <h3 className="font-['American_Typewriter'] font-normal text-xl mb-4 text-[#005F73]">Future-Ready Flexibility</h3>
+                <p>As your business evolves, Dwight Agents are ready to integrate with new tools, processes, and APIs, offering a solution that scales with your success.</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -110,5 +128,6 @@ export default function About() {
 
       <Footer />
     </div>
+    </PageWrapper>
   )
 }

@@ -2,16 +2,31 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import DwightMenu from '../../public/Dwight_Menu-Logo.svg';
 
 const Navbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // Adjust threshold as needed
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="bg-[#370300] text-[#FFCB1F]">
-      <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+    <div
+      className={`bg-[#370300] text-[#FFCB1F] sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? "py-2 shadow-md" : "py-6"
+      }`}
+    >
+      <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/home" className="text-2xl font-bold">
           <Image
             src={DwightMenu}
@@ -62,50 +77,11 @@ const Navbar = () => {
         </Link>
         <button
           className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={() => setScrolled(!scrolled)}
         >
           <Menu className="h-6 w-6" />
         </button>
       </div>
-      {mobileMenuOpen && (
-        <div className="md:hidden">
-          <nav className="px-4 pt-2 pb-4">
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="block hover:underline font-['American_Typewriter'] font-normal">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/product-suite" className="block hover:underline font-['American_Typewriter'] font-normal">
-                  Product Suite
-                </Link>
-              </li>
-              <li>
-                <Link href="/how-it-works" className="block hover:underline font-['American_Typewriter'] font-normal">
-                  How It Works
-                </Link>
-              </li>
-              <li>
-                <Link href="/solutions" className="block hover:underline font-['American_Typewriter'] font-normal">
-                  Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="/meet-dwight" className="block hover:underline font-['American_Typewriter'] font-normal">
-                  Meet Dwight
-                </Link>
-              </li>
-            </ul>
-            <Link
-              href="/contact"
-              className="mt-4 block w-full bg-[#FFCB1F] text-[#370300] hover:bg-[#FFCB1F]/90 px-4 py-2 rounded text-center"
-            >
-              Book a Demo
-            </Link>
-          </nav>
-        </div>
-      )}
     </div>
   );
 };

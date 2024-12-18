@@ -4,9 +4,11 @@ import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
 import Form from '@/app/Components/Form'
 import DwightJustAsk from '../../../public/Dwight_Just-Ask-Logo.svg'
+import { PageWrapper } from '@/app/Components/page-wrapper'
 
 export default function BookDemo() {
   return (
+    <PageWrapper>
     <div className="flex flex-col min-h-screen">
         <Navbar />
 
@@ -93,5 +95,6 @@ export default function BookDemo() {
         </main>
         <Footer />
     </div>
+    </PageWrapper>
   )
 }

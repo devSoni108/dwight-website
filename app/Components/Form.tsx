@@ -46,9 +46,19 @@ const Form = () => {
                             <SelectTrigger>
                                 <SelectValue placeholder="Select your industry" />
                             </SelectTrigger>
-                            <SelectContent>
+                            <SelectContent className="bg-white">
                                 <SelectItem value="advertising">Advertising</SelectItem>
                                 <SelectItem value="finance">Finance</SelectItem>
+                                <SelectItem value="technology">Technology & Software</SelectItem>
+                                <SelectItem value="medical">Healthcare & Medical Services</SelectItem>
+                                <SelectItem value="education">Education & E-Learning</SelectItem>
+                                <SelectItem value="services">Consulting & Professional Services</SelectItem>
+                                <SelectItem value="manufacturing">Manufacturing & Supply Chain</SelectItem>
+                                <SelectItem value="legal">Legal & Compliance</SelectItem>
+                                <SelectItem value="media">Media & Entertainment</SelectItem>
+                                <SelectItem value="hospitality">Hospitality & Travel</SelectItem>
+                                <SelectItem value="transportation">Logistics & Transportation</SelectItem>
+                                <SelectItem value="government">Government & Public Sector</SelectItem>
                                 <SelectItem value="retail">Retail</SelectItem>
                                 <SelectItem value="corporate">Corporate</SelectItem>
                                 <SelectItem value="other">Other</SelectItem>
@@ -105,7 +115,7 @@ const Form = () => {
                             <Label htmlFor="notes">Additional Notes (optional)</Label>
                             <Textarea id="notes" placeholder="Any specific questions or preferences?" />
                         </div>
-                        <Button type="submit" className="w-full bg-[#005F73] hover:bg-[#005F73]/90 text-white">Book a Demo</Button>
+                        <Button type="submit" className="w-full bg-[#005F73] hover:bg-[#005F73]/90 text-white font-bold">Submit</Button>
                         </form>
     )
 }

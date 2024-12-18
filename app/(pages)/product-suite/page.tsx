@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { LucideIcon, Briefcase, Users, Brain, Zap, Rocket, BarChart, BookOpen } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
+import { PageWrapper } from '@/app/Components/page-wrapper'
 
 type AgentCardProps = {
   icon: LucideIcon;
@@ -35,6 +36,7 @@ const BusinessAgentCard = ({ icon: Icon, title, description }: BusinessAgentCard
 
 export default function ProductSuite() {
   return (
+    <PageWrapper>
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
@@ -72,7 +74,7 @@ export default function ProductSuite() {
               <AgentCard 
                 icon={Users}
                 title="Client Service Agent"
-                description="Tracks client feedback, manages interactions, and ensures smooth client-agency communication."
+                description="Simplifies Client Service workflows by generating clear, actionable briefs from meeting transcripts, reducing admin time, and allowing teams to focus on nurturing client relationships."
               />
               <AgentCard 
                 icon={Zap}
@@ -87,12 +89,12 @@ export default function ProductSuite() {
               <AgentCard 
                 icon={Briefcase}
                 title="Brand Guardian Agent"
-                description="Ensures all content aligns with brand guidelines, providing consistency across client work."
+                description="Acts as a QA for brand tone, copy, and messaging. With a built-in brand playbook, it ensures all content aligns with brand guidelines and maintains consistency across all media."
               />
             </div>
             <div className="text-center mt-8">
-              <Link href="/contact" className="inline-block bg-[#005F73] text-[#FFCB1F] hover:bg-[#005F73]/90 px-6 py-3 rounded font-bold">
-                Learn More About Advertising-Specific Agents
+              <Link href="/how-it-works" className="inline-block bg-[#005F73] text-[#FFCB1F] hover:bg-[#005F73]/90 px-6 py-3 rounded font-bold">
+                Learn More
               </Link>
             </div>
           </div>
@@ -110,7 +112,7 @@ export default function ProductSuite() {
               <BusinessAgentCard 
                 icon={Briefcase}
                 title="Executive Assistant Agent"
-                description="Provides schedule management, document preparation, and task tracking to support busy executives."
+                description="More than just scheduling support. This Agent tracks key metrics, forecasts growth opportunities, and highlights operational priorities—helping executives stay ahead of business demands."
               />
               <BusinessAgentCard 
                 icon={Users}
@@ -145,7 +147,7 @@ export default function ProductSuite() {
             </div>
             <div className="text-center mt-8">
               <Link href="/contact" className="inline-block bg-[#FFCB1F] text-[#370300] hover:bg-[#FFCB1F]/90 px-6 py-3 rounded font-bold">
-                Explore All Business Agents
+                Book A Demo
               </Link>
             </div>
           </div>
@@ -182,5 +184,6 @@ export default function ProductSuite() {
 
       <Footer />
     </div>
+    </PageWrapper>
   )
 }

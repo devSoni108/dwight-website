@@ -1,9 +1,11 @@
 'use client'
+import Link from 'next/link'
 
 import { useState } from 'react'
 import { Briefcase, BarChart, ShoppingBag, Globe, ChevronDown, ChevronUp } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
+import { PageWrapper } from '@/app/Components/page-wrapper'
 
 interface IndustrySectionProps {
   icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; // Type for the icon prop
@@ -56,6 +58,7 @@ export default function Solutions() {
   };
 
   return (
+    <PageWrapper>
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">
@@ -74,7 +77,7 @@ export default function Solutions() {
           <div className="container mx-auto px-4">
             <IndustrySection
               icon={Briefcase}
-              title="Built for Agencies"
+              title="Custom AI for Agencies"
               description="Dwight's Agents are specially designed to support advertising and creative teams. From managing creative workflows to tracking client feedback and coordinating production timelines, each Agent is equipped to handle the fast-paced demands of agency life."
               agents={[
                 "Main Operations Agent: Keeps teams aligned across all projects, ensuring seamless project handovers and team communication.",
@@ -149,6 +152,11 @@ export default function Solutions() {
               </div>
             </div>
           </div>
+          <div className="text-center mt-8">
+            <Link href="/contact" className="inline-block bg-[#FFCB1F] text-[#370300] hover:bg-[#FFCB1F]/90 px-6 py-3 rounded font-bold">
+              Need an AI Agent for your industry? Book a demo.
+            </Link>
+          </div>
         </section>
 
         <section className="py-12 bg-[#FFCB1F]">
@@ -162,5 +170,6 @@ export default function Solutions() {
 
       <Footer />
     </div>
+    </PageWrapper>
   );
 }
