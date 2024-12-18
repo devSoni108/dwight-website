@@ -1,17 +1,18 @@
-'use client'
+'use client';
 
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react"; // Import the close icon
 import DwightMenu from '../../public/Dwight_Menu-Logo.svg';
 
 const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // Adjust threshold as needed
+      setScrolled(window.scrollY > 50); // Set scrolled state if scroll is greater than 50px
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -77,11 +78,53 @@ const Navbar = () => {
         </Link>
         <button
           className="md:hidden"
-          onClick={() => setScrolled(!scrolled)}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          <Menu className="h-6 w-6" />
+          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
+      {mobileMenuOpen && (
+        <div
+          className="md:hidden absolute top-full left-0 w-full bg-[#370300] z-50"
+        >
+          <nav className="px-4 pt-2 pb-4">
+            <ul className="space-y-2">
+              <li>
+                <Link href="/about" className="block hover:underline font-['American_Typewriter'] font-normal">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/product-suite" className="block hover:underline font-['American_Typewriter'] font-normal">
+                  Product Suite
+                </Link>
+              </li>
+              <li>
+                <Link href="/how-it-works" className="block hover:underline font-['American_Typewriter'] font-normal">
+                  How It Works
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions" className="block hover:underline font-['American_Typewriter'] font-normal">
+                  Solutions
+                </Link>
+              </li>
+              <li>
+                <Link href="/meet-dwight" className="block hover:underline font-['American_Typewriter'] font-normal">
+                  Meet Dwight
+                </Link>
+              </li>
+            </ul>
+            <Link
+              href="/contact"
+              className="mt-4 block w-full bg-[#FFCB1F] text-[#370300] hover:bg-[#FFCB1F]/90 px-4 py-2 rounded text-center"
+            >
+              Book a Demo
+            </Link>
+          </nav>
+        </div>
+      )}
     </div>
   );
 };
