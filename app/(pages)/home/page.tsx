@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { Brain, Users, Lightbulb, Rocket } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
-
 import DwightLogo from '../../../public/Dwight_Main-Logo.svg'
 
 export default function Home() {
