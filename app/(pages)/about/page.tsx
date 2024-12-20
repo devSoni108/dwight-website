@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image';
 
-import { Brain, Users, Rocket, CircleUser } from 'lucide-react'
+import { Brain, Users, Rocket, } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
 import Footer from '@/app/Components/Footer'
 
