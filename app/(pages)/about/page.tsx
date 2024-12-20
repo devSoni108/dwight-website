@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image';
 
 import { Brain, Users, Rocket, CircleUser } from 'lucide-react'
 import Navbar from '@/app/Components/Navbar'
@@ -60,14 +61,42 @@ export default function About() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { name: "Shamesh Padayachy", role: "Founder & Chief Agent Architect", description: "The visionary behind Dwight, Shamesh leads the design of custom AI Agents with a unique focus on aligning AI with real business needs." },
-                { name: "Derryn de la Querra", role: "Business Development Director", description: "Derryn ensures that each client's specific goals and needs are deeply understood, connecting businesses to the right Dwight Agent." },
-                { name: "Michelle Smuts", role: "Finance Director", description: "Michelle oversees financial strategy and advises on financial dataset integrations, supporting the financial applications of Dwight Agents." },
-                { name: "Andrew Murton", role: "Content & Quality Specialist", description: "Andrew ensures each Agent is clear, refined, and effective, with a human eye providing quality control over every interaction and piece of content in our AI solutions." }
+                {
+                  name: "Shamesh Padayachy",
+                  role: "Founder & Chief Agent Architect",
+                  description: "The visionary behind Dwight, Shamesh leads the design of custom AI Agents with a unique focus on aligning AI with real business needs.",
+                  image: "/Team-Image_Shamesh.jpg",
+                },
+                {
+                  name: "Derryn de la Querra",
+                  role: "Business Development Director",
+                  description: "Derryn ensures that each client's specific goals and needs are deeply understood, connecting businesses to the right Dwight Agent.",
+                  image: "/Team-Image_Derryn.jpg",
+                },
+                {
+                  name: "Michelle Smuts",
+                  role: "Finance Director",
+                  description: "Michelle oversees financial strategy and advises on financial dataset integrations, supporting the financial applications of Dwight Agents.",
+                  image: "/Team-Image_Michelle.jpg",
+                },
+                {
+                  name: "Andrew Murton",
+                  role: "Content & Quality Specialist",
+                  description: "Andrew ensures each Agent is clear, refined, and effective, with a human eye providing quality control over every interaction and piece of content in our AI solutions.",
+                  image: "/Team-Image_Andrew.jpg",
+                },
               ].map((member, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                  <CircleUser className="rounded-full mx-auto mb-4 w-36 h-36 text-[#370300]" />
-                  <h3 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#370300] text-center">{member.name}</h3>
+                  <Image
+                    src={member.image}
+                    alt={`Photo of ${member.name}`}
+                    width={144}
+                    height={144}
+                    className="rounded-full mx-auto mb-4"
+                  />
+                  <h3 className="font-['American_Typewriter'] font-normal text-xl mb-2 text-[#370300] text-center">
+                    {member.name}
+                  </h3>
                   <p className="font-bold mb-4 text-[#005F73] text-center">{member.role}</p>
                   <p className="text-sm text-[#370300]">{member.description}</p>
                 </div>
@@ -78,6 +107,7 @@ export default function About() {
             </p>
           </div>
         </section>
+
 
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
