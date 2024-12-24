@@ -10,44 +10,57 @@ import { Checkbox } from "@/components/ui/checkbox"
 const Form = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        console.log('Form submitted')
+        const formData = new FormData(event.target as HTMLFormElement)
+        const email = formData.get('email')
+
+        // Optional: Add basic email validation
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email as string)) {
+            console.error('Invalid email address')
+            return
+        }
+
+        console.log('Form submitted successfully')
     }
 
     return (
         <form 
             name="contact" 
             method="POST" 
+            action="/thank-you" 
             data-netlify="true" 
             netlify-honeypot="bot-field" 
             onSubmit={handleSubmit} 
             className="space-y-4"
         >
+            {/* Honeypot field for Netlify Forms */}
             <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                     <Label htmlFor="name">Name</Label>
-                    <Input id="name" name="name" placeholder="Your full name" required />
+                    <Input id="name" name="name" placeholder="Your full name" aria-label="Name" required />
                 </div>
                 <div>
                     <Label htmlFor="company">Company Name</Label>
-                    <Input id="company" name="company" placeholder="Your company" required />
+                    <Input id="company" name="company" placeholder="Your company" aria-label="Company Name" required />
                 </div>
             </div>
             <div>
                 <Label htmlFor="businessUrl">Business URL</Label>
-                <Input id="businessUrl" name="businessUrl" type="url" placeholder="https://www.example.com" required />
+                <Input id="businessUrl" name="businessUrl" type="url" placeholder="https://www.example.com" aria-label="Business URL" />
             </div>
             <div>
                 <Label htmlFor="role">Role / Job Title</Label>
-                <Input id="role" name="role" placeholder="Your role" required />
+                <Input id="role" name="role" placeholder="Your role" aria-label="Role or Job Title" required />
             </div>
             <div>
                 <Label htmlFor="email">Email Address</Label>
-                <Input id="email" name="email" type="email" placeholder="you@example.com" required />
+                <Input id="email" name="email" type="email" placeholder="you@example.com" aria-label="Email Address" required />
             </div>
             <div>
                 <Label htmlFor="phone">Phone Number (optional)</Label>
-                <Input id="phone" name="phone" type="tel" placeholder="Your phone number" />
+                <Input id="phone" name="phone" type="tel" placeholder="Your phone number" aria-label="Phone Number" />
             </div>
             <div>
                 <Label htmlFor="industry">Industry / Sector</Label>
@@ -56,21 +69,25 @@ const Form = () => {
                         <SelectValue placeholder="Select your industry" />
                     </SelectTrigger>
                     <SelectContent className="bg-white">
-                        <SelectItem value="advertising">Advertising</SelectItem>
-                        <SelectItem value="finance">Finance</SelectItem>
-                        <SelectItem value="technology">Technology & Software</SelectItem>
-                        <SelectItem value="medical">Healthcare & Medical Services</SelectItem>
-                        <SelectItem value="education">Education & E-Learning</SelectItem>
-                        <SelectItem value="services">Consulting & Professional Services</SelectItem>
-                        <SelectItem value="manufacturing">Manufacturing & Supply Chain</SelectItem>
-                        <SelectItem value="legal">Legal & Compliance</SelectItem>
-                        <SelectItem value="media">Media & Entertainment</SelectItem>
-                        <SelectItem value="hospitality">Hospitality & Travel</SelectItem>
-                        <SelectItem value="transportation">Logistics & Transportation</SelectItem>
-                        <SelectItem value="government">Government & Public Sector</SelectItem>
-                        <SelectItem value="retail">Retail</SelectItem>
-                        <SelectItem value="corporate">Corporate</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
+                        {[
+                            { value: "advertising", label: "Advertising" },
+                            { value: "finance", label: "Finance" },
+                            { value: "technology", label: "Technology & Software" },
+                            { value: "medical", label: "Healthcare & Medical Services" },
+                            { value: "education", label: "Education & E-Learning" },
+                            { value: "services", label: "Consulting & Professional Services" },
+                            { value: "manufacturing", label: "Manufacturing & Supply Chain" },
+                            { value: "legal", label: "Legal & Compliance" },
+                            { value: "media", label: "Media & Entertainment" },
+                            { value: "hospitality", label: "Hospitality & Travel" },
+                            { value: "transportation", label: "Logistics & Transportation" },
+                            { value: "government", label: "Government & Public Sector" },
+                            { value: "retail", label: "Retail" },
+                            { value: "corporate", label: "Corporate" },
+                            { value: "other", label: "Other" },
+                        ].map(({ value, label }) => (
+                            <SelectItem key={value} value={value}>{label}</SelectItem>
+                        ))}
                     </SelectContent>
                 </Select>
             </div>
@@ -122,7 +139,7 @@ const Form = () => {
             </div>
             <div>
                 <Label htmlFor="notes">Additional Notes (optional)</Label>
-                <Textarea id="notes" name="notes" placeholder="Any specific questions or preferences?" />
+                <Textarea id="notes" name="notes" placeholder="Any specific questions or preferences?" aria-label="Additional Notes" />
             </div>
             <Button type="submit" className="w-full bg-[#005F73] hover:bg-[#005F73]/90 text-white font-bold">Submit</Button>
         </form>
