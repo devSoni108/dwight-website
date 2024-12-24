@@ -1,15 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // Enables static exports for your app
   images: {
-    domains: [], // Add trusted domains for external images
+    unoptimized: true, // Required for static exports if using the Next.js Image component
   },
-  // Enable static export if you're targeting a fully static site
-  output: process.env.STATIC_EXPORT ? 'export' : undefined,
-  trailingSlash: true, // Ensures trailing slashes for static paths (optional for static exports)
-  experimental: {
-    appDir: true, // Include this if using the new `app/` directory feature
-  },
-  reactStrictMode: true, // Enables React's Strict Mode
+  reactStrictMode: true,
+  trailingSlash: true, // Ensures trailing slashes in paths (important for static hosting)
 };
 
 export default nextConfig;
