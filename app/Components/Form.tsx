@@ -35,7 +35,7 @@ const Form = () => {
             </div>
             <div>
                 <Label htmlFor="businessUrl">Business URL</Label>
-                <Input id="businessUrl" name="businessUrl" type="url" placeholder="https://www.example.com" required />
+                <Input id="businessUrl" name="businessUrl" type="url" placeholder="https://www.example.com" />
             </div>
             <div>
                 <Label htmlFor="role">Role / Job Title</Label>
