@@ -38,11 +38,11 @@ const Form = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="name">Name*</Label>
                     <Input id="name" name="name" placeholder="Your full name" aria-label="Name" required />
                 </div>
                 <div>
-                    <Label htmlFor="company">Company Name</Label>
+                    <Label htmlFor="company">Company Name*</Label>
                     <Input id="company" name="company" placeholder="Your company" aria-label="Company Name" required />
                 </div>
             </div>
@@ -51,11 +51,11 @@ const Form = () => {
                 <Input id="businessUrl" name="businessUrl" type="url" placeholder="https://www.example.com" aria-label="Business URL" />
             </div>
             <div>
-                <Label htmlFor="role">Role / Job Title</Label>
+                <Label htmlFor="role">Role / Job Title*</Label>
                 <Input id="role" name="role" placeholder="Your role" aria-label="Role or Job Title" required />
             </div>
             <div>
-                <Label htmlFor="email">Email Address</Label>
+                <Label htmlFor="email">Email Address*</Label>
                 <Input id="email" name="email" type="email" placeholder="you@example.com" aria-label="Email Address" required />
             </div>
             <div>
