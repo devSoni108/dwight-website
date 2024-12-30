@@ -8,28 +8,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox"
 
 const Form = () => {
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault()
-        const formData = new FormData(event.target as HTMLFormElement)
-        const email = formData.get('email')
-
-        // Optional: Add basic email validation
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email as string)) {
-            console.error('Invalid email address')
-            return
-        }
-
-        console.log('Form submitted successfully')
-    }
-
     return (
         <form 
             name="contact" 
-            method="POST" 
-            action="/thank-you" 
+            method="POST"
             data-netlify="true" 
-            netlify-honeypot="bot-field" 
-            onSubmit={handleSubmit} 
+            netlify-honeypot="bot-field"
             className="space-y-4"
         >
             {/* Honeypot field for Netlify Forms */}
