@@ -40,26 +40,30 @@ export default function BookDemo() {
                         </div>
                         <div className="space-y-8">
                             <div className="bg-[#005F73] p-6 rounded-lg">
-                            <h2 className="font-['American_Typewriter'] font-normal text-3xl mb-6 text-[#FFCB1F]">
+                                <h2 className="font-['American_Typewriter'] font-normal text-3xl mb-6 text-[#FFCB1F]">
                                 Contact
                             </h2>
                             <div className="space-y-4 mb-8">
                                 <div className="flex items-center space-x-2">
-                                <Mail className="w-8 h-8 text-[#FFCB1F]" />
-                                <span className="text-white">info@justaskdwight.com</span>
+                                    <a href="mailto:info@justaskdwight.com">
+                                        <Mail className="w-8 h-8 text-[#FFCB1F]" />
+                                        <span className="text-white">info@justaskdwight.com</span>
+                                    </a>
                                 </div>
                                 <div className="flex items-center space-x-2">
-                                <Phone className="w-8 h-8 text-[#FFCB1F]" />
-                                <span className="text-white">+27 60 454 8361</span>
+                                    <a href="tel:+27604548361">
+                                        <Phone className="w-8 h-8 text-[#FFCB1F]" />
+                                        <span className="text-white">+27 60 454 8361</span>
+                                    </a>
                                 </div>
                                 <div className="flex items-center space-x-2">
-                                <Clock className="w-8 h-8 text-[#FFCB1F]" />
-                                <span className="text-white">Monday - Friday, 9 am - 5 pm</span>
+                                    <Clock className="w-8 h-8 text-[#FFCB1F]" />
+                                    <span className="text-white">Monday - Friday, 9 am - 5 pm</span>
                                 </div>
                             </div>
                             </div>
                             <div className="bg-[#FFCB1F] p-6 rounded-lg">
-                            <h2 className="font-['American_Typewriter'] font-normal text-3xl mb-6 text-[#370300]">
+                                <h2 className="font-['American_Typewriter'] font-normal text-3xl mb-6 text-[#370300]">
                                 Why Book a Demo?
                             </h2>
                             <p className="mb-6 text-[#370300]">
@@ -67,11 +71,11 @@ export default function BookDemo() {
                             </p>
                             <div className="space-y-4">
                                 <div className="bg-white p-4 rounded-lg flex items-start space-x-4">
-                                <Brain className="w-8 h-8 mt-1 text-[#B8A9C9] flex-shrink-0" />
-                                <div>
-                                    <strong className="text-[#370300] block mb-1">Explore Custom Scenarios:</strong>
-                                    <span className="text-[#370300]">See how Dwight adapts to your business&apos;s unique needs.</span>
-                                </div>
+                                    <Brain className="w-8 h-8 mt-1 text-[#B8A9C9] flex-shrink-0" />
+                                    <div>
+                                        <strong className="text-[#370300] block mb-1">Explore Custom Scenarios:</strong>
+                                        <span className="text-[#370300]">See how Dwight adapts to your business&apos;s unique needs.</span>
+                                    </div>
                                 </div>
                                 <div className="bg-white p-4 rounded-lg flex items-start space-x-4">
                                 <Lightbulb className="w-8 h-8 mt-1 text-[#B8A9C9] flex-shrink-0" />

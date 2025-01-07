@@ -56,7 +56,7 @@ const Form = () => {
         <Input
           id="businessUrl"
           name="businessUrl"
-          placeholder="https://www.example.com"
+          placeholder="www.example.com"
           aria-label="Business URL"
         />
       </div>
