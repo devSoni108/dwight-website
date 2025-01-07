@@ -32,7 +32,7 @@ const Form = () => {
             </div>
             <div>
                 <Label htmlFor="businessUrl">Business URL</Label>
-                <Input id="businessUrl" name="businessUrl" type="url" placeholder="https://www.example.com" aria-label="Business URL" />
+                <Input id="businessUrl" name="businessUrl" placeholder="https://www.example.com" aria-label="Business URL" />
             </div>
             <div>
                 <Label htmlFor="role">Role / Job Title*</Label>
