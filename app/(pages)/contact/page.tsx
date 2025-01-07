@@ -45,13 +45,13 @@ export default function BookDemo() {
                             </h2>
                             <div className="space-y-4 mb-8">
                                 <div className="flex items-center space-x-2">
-                                    <a href="mailto:info@justaskdwight.com" className='flex'>
+                                    <a href="mailto:info@justaskdwight.com" className='flex items-center space-x-2'>
                                         <Mail className="w-8 h-8 text-[#FFCB1F]" />
                                         <span className="text-white">info@justaskdwight.com</span>
                                     </a>
                                 </div>
                                 <div className="flex items-center space-x-2">
-                                    <a href="tel:+27604548361" className='flex'>
+                                    <a href="tel:+27604548361" className='flex items-center space-x-2'>
                                         <Phone className="w-8 h-8 text-[#FFCB1F]" />
                                         <span className="text-white">+27 60 454 8361</span>
                                     </a>
